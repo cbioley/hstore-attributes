@@ -47,7 +47,7 @@ module HstoreColumns
       when :decimal              then "#{klass}.value_to_decimal(#{var_name})"
       when :datetime, :timestamp then "#{klass}.string_to_time(#{var_name})"
       when :time                 then "#{klass}.string_to_dummy_time(#{var_name})"
-      when :date                 then "#{klass}.string_to_date(#{var_name})"
+      when :date                 then "#{klass}.value_to_date(#{var_name})"
       when :binary               then "#{klass}.binary_to_string(#{var_name})"
       when :boolean              then "#{klass}.value_to_boolean(#{var_name})"
       else var_name
